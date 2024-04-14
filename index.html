@@ -2,7 +2,6 @@
 <html>
 
 <head>
-  <link rel = "stylesheet" href = "style.css">
 <title>
   Alex's Bio
 </title>
@@ -34,30 +33,6 @@
 
     <p style = "color: white;"><pre align = "center"> &copy Zolten 2024 </pre></p>
 
-          <script>
-        function myFunction() {
-           var element = document.body;
-           element.classList.toggle("dark-mode");
-        }
-        </script>
-            <script>
-                (function() {
-                    document.addEventListener("mousemove", parallax);
-                    const elem = document.querySelector("#container");
-
-                    function parallax(e) {
-                        let _w = window.innerWidth/2;
-                        let _h = window.innerHeight/2;
-                        let _mouseX = e.clientX;
-                        let _mouseY = e.clientY;
-                        let _depth1 = `${50 - (_mouseX - _w) * 0.01}% ${50 - (_mouseY - _h) * 0.01}%`;
-                        let _depth2 = `${50 - (_mouseX - _w) * 0.02}% ${50 - (_mouseY - _h) * 0.02}%`;
-                        let _depth3 = `${50 - (_mouseX - _w) * 0.06}% ${50 - (_mouseY - _h) * 0.06}%`;
-                        let x = `${_depth3}, ${_depth2}, ${_depth1}`;
-                        elem.style.backgroundPosition = x;
-                    }
-                })();
-            </script>
   
 </body>
 
