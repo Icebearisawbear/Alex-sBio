@@ -2,38 +2,56 @@
 <html>
 
 <head>
-<title>
-  Alex's Bio
-</title>
+  <title>Alex's Bio</title>
   <style>
     .text2{
       font-family: 'Roboto' , sans-serif;
     }
-    
+
   .text{
     font-family: 'Roboto' , sans-serif;
     color: #bb00ff;
   }
   </style>
-  
+  <link rel="stylesheet" href="style.css"
+
 </head>
 
-<body>
+<body id = "container" style="background-color: black; color:#bb00ff;">
   <h1 class="text">
     Alex's Bio
     <hr>
   </h1>
 
   <h4 class="text2">
-    I’m a highschool lacrosse player, I’ve played since 2022.I like learning about history, cultures and religions. I enjoy lifting, and playing valorant. Here is my twitch, where I am gonna post content. Click the image under this
+    I’m a highschool lacrosse player, I’ve played since 2022.I like learning about history, cultures and religions. I enjoy lifting, and playing valorant. Here is my twitch, where I am gonna post content. Click the image under this.
   </h4>
+
   <a href="https://www.twitch.tv/Zolten___" target="_blank">
     <img src= "https://m.media-amazon.com/images/I/21kRx-CJsUL.png" width = "50" height = "50" class="center">
       </a>
 
     <p style = "color: white;"><pre align = "center"> &copy Zolten 2024 </pre></p>
 
-  
+  <script>
+      (function() {
+          document.addEventListener("mousemove", parallax);
+          const elem = document.querySelector("#container");
+
+          function parallax(e) {
+              let _w = window.innerWidth/2;
+              let _h = window.innerHeight/2;
+              let _mouseX = e.clientX;
+              let _mouseY = e.clientY;
+              let _depth1 = `${50 - (_mouseX - _w) * 0.01}% ${50 - (_mouseY - _h) * 0.01}%`;
+              let _depth2 = `${50 - (_mouseX - _w) * 0.02}% ${50 - (_mouseY - _h) * 0.02}%`;
+              let _depth3 = `${50 - (_mouseX - _w) * 0.06}% ${50 - (_mouseY - _h) * 0.06}%`;
+              let x = `${_depth3}, ${_depth2}, ${_depth1}`;
+              elem.style.backgroundPosition = x;
+          }
+      })();
+  </script>
+
 </body>
 
 </html>
